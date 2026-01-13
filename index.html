@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+           <p class="logo"> Where in the world?</p>
+           <div class="darkMode">
+            <i class="fa-solid fa-moon"></i>
+            <p>Dark Mode</p>
+           </div>
+           <div class="lightMode hidden">
+            <i class="fa-solid fa-sun"></i>
+            <p>Light Mode</p>
+           </div>
+        </nav>
+    </header>
+    <main>
+        <div class="actions">
+            <div class="inputContainer">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="search" type="text" name="" id="" placeholder="Search for a country...">
+            </div>
+                <select class="region" name="" id="select">
+                  <optgroup>
+                     <option value="" disabled selected hidden>Filter By region</option>
+                     <option value="Africa">Africa</option>
+                     <option value="America">America</option>
+                     <option value="Asia">Asia</option>
+                     <option value="Europe">Europe</option>
+                     <option value="Oceania">Oceania</option>
+                  </optgroup>
+                </select>
+        </div>
+        <div class="countries">
+        </div>
+        <div class="selectedCountry hidden">
+            <button class="backBtn"><i class="fa-solid fa-arrow-left"></i>back</button>
+            <div class="countryInfo">
+                <div class="flag">
+                    <img class="flagValue" src="./Flag.png" alt="">
+                </div>
+                <div class="textInfo">
+                    <h1 class="cntryName">Germany</h1>
+                    <div class="countryDetails">
+                        <p><span>Native Name: </span><span style="color: grey; font-weight: 400;" class="nativeNameValue"></span></p>
+                        <p><span>Population: </span><span style="color: grey; font-weight: 400;" class="populationValue"></span></p>
+                        <p><span>Region: </span><span style="color: grey; font-weight: 400;" class="regionValue"></span></p>
+                        <p><span>Sub Region: </span><span style="color: grey; font-weight: 400;" class="subRegionValue"></span></p>
+                        <p><span>Capital: </span><span style="color: grey; font-weight: 400;" class="capitalValue"></span></p>
+                        <p><span>Top Level Domain: </span><span style="color: grey; font-weight: 400;" class="domainValue"></span></p>
+                        <p><span>Currencies: </span><span style="color: grey; font-weight: 400;" class="currenciesValue"></span></p>
+                        <p><span>languages: </span><span style="color: grey; font-weight: 400;" class="languagesValue"></span></p>
+                    </div>
+                    <div class="borderCountries">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

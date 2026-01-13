@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: "Nunito Sans", sans-serif;
+}
+body{
+width: 100%;
+height: auto;
+background-color: hsl(0, 0%, 99%);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-color: hsl(0, 100%, 100%);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+nav{
+width: 100%;
+height: 100%;
+padding: 0px 60px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.logo{
+    font-weight: 800;
+    font-size: 22px;
+}
+.darkMode,.lightMode{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+main{
+width: 80%;
+height: 100%;  
+padding-top: 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+gap: 50px;
+}
+.actions{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.inputContainer{
+width: 30%;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+border-radius: 4px;
+background-color: white;
+}
+.inputContainer input{
+width: 80%;
+height: 100%;
+padding: 15px;
+border: none;
+outline: none;
+background-color: white;
+}
+.inputContainer input::placeholder{
+   color: hsl(0, 0%, 50%); 
+}
+.inputContainer i{
+    color: hsl(0, 0%, 50%);
+}
+.region{
+padding: 15px 0px;
+background-color: white;
+border: none;
+outline: none;
+box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+    cursor: pointer;
+}
+ .countries {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    flex: 1 1 250px;
+    max-width: 250px;
+    min-height: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+.item img{
+    width: 100%;
+    height: 150px;
+}
+.item h1{
+    font-size: 20px;
+    text-align: center;
+}
+.item .details{
+    width: 100%;
+    padding: 20px;
+}
+.details span{
+    font-weight: bold;
+}
+.hidden{
+    display: none !important;
+}
+
+/* Country Info CSS */
+.selectedCountry{
+width: auto;
+height: 450px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+gap: 30px;
+}
+.backBtn{
+    padding: 8px 25px;
+    background-color: white;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);;
+
+}
+.countryBorder{
+     padding: 8px 25px;
+    background-color: white;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);;  
+}
+.countryInfo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.flag{
+    width: 50%;
+    height: auto;
+}
+.flag img{
+    width: 100%;
+    height: 100%;
+}
+.textInfo{
+width: 50%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: start;
+justify-content: start;
+gap: 30px;
+}
+.countryDetails{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.countryDetails span{
+    font-weight: bold;
+}
+.countryDetails p{
+width: 35%;
+ height: auto;
+}
+.borderCountries{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+@media (max-width : 997px) {
+    .selectedCountry{
+        height: 100%;
+    }
+    .countryInfo{
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+    }
+    .flag{
+        width: 100%;
+    }
+    .countryDetails{
+        padding: 20px 0px;
+        align-items: start;
+        height: auto;
+    }
+    .textInfo{
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .borderCountries{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width : 375px) {
+    .logo{
+        font-size: 12px;
+    }
+    nav{
+        padding: 0 10px;
+    }
+    .actions{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .inputContainer{
+        width: 90%;
+    }
+    .countries{
+        width: 100%;
+        flex-direction: column;
+    }
+    .item{
+        width: 100%;
+    }
+    .darkMode,.lightMode{
+        font-size: 12px;
+    }
+    .selectedCountry{
+        height: 100%;
+    }
+    .countryInfo{
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+    }
+    .flag{
+        width: 100%;
+    }
+    .countryDetails{
+        padding: 20px 0px;
+        align-items: start;
+        height: auto;
+    }
+    .textInfo{
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .borderCountries{
+        width: 100%;
+        height: auto;
+    }
+}
